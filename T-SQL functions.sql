@@ -1,20 +1,20 @@
 /*1. AVG = this function returns the average of the values in a group. It ignores null values.*/
-SELECT AVG(DISTINCT ListPrice) as [Average Price]
+SELECT AVG(DISTINCT ListPrice) as [AveragePrice]
 FROM Production.Product; 
 GO
 
 /*2. COUNT = this function returns the number of items found in a group.*/
-SELECT COUNT(DISTINCT Name) as [Distinct Product]  -- returns the number of unique, nonnull values
+SELECT COUNT(DISTINCT Name) as [DistinctProduct]  -- returns the number of unique, nonnull values
 FROM Production.Product;
 GO
 
 /*3. MAX = Returns the maximum value in the expression.*/
-SELECT MAX(ListPrice) as [MAX Price] 
+SELECT MAX(ListPrice) as [MAXPrice] 
 FROM Production.Product;  
 GO  
 
 /*4. MIN = returns the minimum value in the expression.*/
-SELECT  MIN(ListPrice) as [MIN Price] 
+SELECT  MIN(ListPrice) as [MINPrice] 
 FROM Production.Product;    
 GO  
 
@@ -69,33 +69,33 @@ GO
 SELECT CONCAT ('Happy ', 'Birthday ', 11, '/', '19') AS Result;
 GO
 
-/*14. LEFT = Returns the left part of a character string with the specified number of characters.*/
+/*14. LEFT = returns the left part of a character string with the specified number of characters.*/
 SELECT LEFT('abcdefg',2);   --ab
 GO
 
-/*15. LEN = Returns the number of characters of the specified string expression, excluding trailing spaces.*/
+/*15. LEN = returns the number of characters of the specified string expression, excluding trailing spaces.*/
 SELECT TOP 10 LEN([FirstName]) AS LENGTH, FirstName 
 FROM [Person].[Person]
 ORDER BY LEN([FirstName]) DESC
 GO
 
-/*16. REPLACE = Replaces all occurrences of a specified string value with another string value.*/
+/*16. REPLACE = replaces all occurrences of a specified string value with another string value.*/
 SELECT REPLACE('abcdefghicde','cde','xxx');  -- abxxxfghixxx
 GO
 
-/*17. RIGHT = Returns the right part of a character string with the specified number of characters.*/
+/*17. RIGHT = returns the right part of a character string with the specified number of characters.*/
 SELECT RIGHT('abcdefg',2);  --fg
 GO
 
-/*18. RTRIM = Removes space character char(32) or other specified characters from the end of a string.*/
+/*18. RTRIM = removes space character char(32) or other specified characters from the end of a string.*/
 SELECT RTRIM('Removes trailing spaces.   ');
 GO
 
-/*19. SUBSTRING = Returns part of a character, binary, text, or image expression in SQL Server.  SUBSTRING ( expression, start, length )*/
+/*19. SUBSTRING = returns part of a character, binary, text, or image expression in SQL Server.  SUBSTRING ( expression, start, length )*/
 SELECT x = SUBSTRING('abcdef', 2, 3);   --bcd
 GO
 
-/*20. TRIM = Removes the space character char(32) or other specified characters from the start and end of a string. 
+/*20. TRIM = removes the space character char(32) or other specified characters from the start and end of a string. 
 The following example provides a list of possible characters to remove from a string:*/
 SELECT TRIM( '.,! ' FROM '     #     test    .') AS Result;
 GO
