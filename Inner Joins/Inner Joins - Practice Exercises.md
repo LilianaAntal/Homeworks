@@ -1,4 +1,4 @@
-## Inner Joins in T-SQL: Practical Exercises on AdventureWorks2012
+## Inner Joins in T-SQL: Practical Exercises on AdventureWorks2012 
 
 ### Exercise 01: Retrieve All Orders for Individual Customers
 
