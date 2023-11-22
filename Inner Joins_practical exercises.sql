@@ -1,3 +1,4 @@
+USE AdventureWorks2012;
 /* 1 Retrieve all orders and their corresponding customer names, specifically for individuals.
 1.1.Retrieve only the rows where the PersonType column in the Person.Person table has the value 'IN' (Individual consumers).
 Returns 27659 rows */
