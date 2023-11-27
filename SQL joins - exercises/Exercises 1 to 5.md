@@ -23,7 +23,7 @@
 |Pit Alex	| Julian Green |	London |
 
 **2.** From the following tables ("orders" and "customer") write a SQL query to find those orders where the order amount exists between 500 and 2000. 
-Return ord_no, purch_amt, cust_name, city.
+> Return ord_no, purch_amt, cust_name, city.
 - Solution:
   ```
 	select
@@ -37,13 +37,14 @@ Return ord_no, purch_amt, cust_name, city.
 	where O.purch_amt between 500 and 2000;	
 
 **Output of the Query**:
+
 | ord_no  | purch_amt | cust_name | city |
 |-----------|------------|----------|----------|
 | 70007	| 948.50 |	Graham Zusi	| California |
 | 70010	| 1983.43|	Fabian Johnson	| Paris |
 
 **3.** From the following tables ("customer" and "salesman") write a SQL query to find the salesperson(s) and the customer(s) he represents. 
-Return Customer Name, city, Salesman, commission.
+> Return Customer Name, city, Salesman, commission.
 - Solution:
   ```
 	select
@@ -57,6 +58,7 @@ Return Customer Name, city, Salesman, commission.
 	order by Salesman;
 
 **Output of the Query**:
+
 | Customer_Name  | city | Salesman | comission |
 |-----------|------------|----------|----------|
 | Nick Rimando	| New York | James Hoog | 0.15 |
@@ -69,8 +71,32 @@ Return Customer Name, city, Salesman, commission.
 | Brad Guzan |	London	 | Pit Alex | 0.11 |
 
 **4.** From the following tables ("customer" and "salesman") write a SQL query to find salespeople who received commissions of more than 12 percent from the company. 
-Return Customer Name, customer city, Salesman, commission.  
+> Return Customer Name, customer city, Salesman, commission.
+- Solution:
+  ```
+	select
+		C.cust_name as Customer_Name,
+		C.city,
+		S.name as Salesman,
+		S.comission
+	from customer C
+	join salesman S
+		on C.salesman_id = S.salesman_id
+	where S.comission > 0.12
+	order by Salesman;
+
+**Output of the Query**:
+
+| Customer_Name  | city | Salesman | comission |
+|-----------|------------|----------|----------|
+|Nick Rimando	|New York	|James Hoog|0.15|
+|Brad Davis	|New York	|James Hoog	|0.15|
+|Fabian Johnson|	Paris|	Mc Lyon |	0.14|
+|Graham Zusi|	California|	Nail Knite|	0.13|
+|Julian Green	|London	|Nail Knite	|0.13|
+|Jozy Altidor	|Moscow	|Paul Adam|	0.13|
+
 
 **5.** From the following tables ("customer" and "salesman") write a SQL query to locate those salespeople who do not live in the same city where 
 --their customers live and have received a commission of more than 12% from the company. 
-Return Customer Name, customer city, Salesman, salesman city, commission. 
+> Return Customer Name, customer city, Salesman, salesman city, commission. 
