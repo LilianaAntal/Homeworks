@@ -1,4 +1,4 @@
-**1. From the following tables ("salesman" and "customer") write a SQL query to find the salesperson and customer who reside in the same city. 
+**1.** From the following tables ("salesman" and "customer") write a SQL query to find the salesperson and customer who reside in the same city. 
 Return Salesman, cust_name and city.
 Solution:
   select
