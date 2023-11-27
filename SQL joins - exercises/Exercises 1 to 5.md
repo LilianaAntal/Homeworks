@@ -76,7 +76,7 @@
   ```
 	select
 		C.cust_name as Customer_Name,
-		C.city,
+		C.city as Customer_City,
 		S.name as Salesman,
 		S.comission
 	from customer C
@@ -87,7 +87,7 @@
 
 **Output of the Query**:
 
-| Customer_Name  | city | Salesman | comission |
+| Customer_Name  | Customer_City | Salesman | comission |
 |-----------|------------|----------|----------|
 |Nick Rimando	|New York |James Hoog |0.15|
 |Brad Davis	|New York |James Hoog |0.15|
