@@ -9,7 +9,7 @@ Return Salesman, cust_name and city.
   from salesman S
   join customer C
 	on S.city = C.city
-  order by Salesman;```
+  order by Salesman;
   
 **Sample output**:
 
@@ -34,7 +34,7 @@ Return ord_no, purch_amt, cust_name, city.
 	from customer C
 	left join orders O
 		on C.customer_id = O.customer_id
-	where O.purch_amt between 500 and 2000;	```
+	where O.purch_amt between 500 and 2000;	
 
 **Sample output**:
 | ord_no  | purch_amt | cust_name | city |
