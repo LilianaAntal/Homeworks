@@ -37,7 +37,7 @@ order by Salesman;
 --Return Customer Name, customer city, Salesman, commission.  
 select
 	C.cust_name as Customer_Name,
-	C.city,
+	C.city as Customer_City,
 	S.name as Salesman,
 	S.comission
 from customer C
