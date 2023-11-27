@@ -46,15 +46,15 @@ Return ord_no, purch_amt, cust_name, city.
 Return Customer Name, city, Salesman, commission.
 - Solution:
   ```
-select
-	C.cust_name as Customer_Name,
-	C.city,
-	S.name as Salesman,
-	S.comission
-from customer C
-join salesman S
-	on C.salesman_id = S.salesman_id
-order by Salesman;
+	select
+		C.cust_name as Customer_Name,
+		C.city,
+		S.name as Salesman,
+		S.comission
+	from customer C
+	join salesman S
+		on C.salesman_id = S.salesman_id
+	order by Salesman;
 
 **Output of the Query**:
 | Customer_Name  | city | Salesman | comission |
@@ -64,7 +64,7 @@ order by Salesman;
 | Geoff Cameron	| Berlin | Lauson Hen |	0.12 |
 | Fabian Johnson | Paris | Mc Lyon | 0.14 |
 | Graham Zusi |	California | Nail Knite | 0.13 |
-| Julian Green | London	Nail Knite | 0.13 |
+| Julian Green | London | Nail Knite | 0.13 |
 | Jozy Altidor	| Moscow | Paul Adam | 0.13 |
 | Brad Guzan |	London	 | Pit Alex | 0.11 |
 
