@@ -9,8 +9,8 @@ Return Salesman, cust_name and city.
 from salesman S
 join customer C
 	on S.city = C.city
-order by Salesman;
-````````
+order by Salesman;````````
+
 
 **Sample output**:
 
