@@ -26,17 +26,27 @@ Return Salesman, cust_name and city.
 Return ord_no, purch_amt, cust_name, city.
 - Solution:
   ```
-	select
-		O.ord_no,
-		O.purch_amt,
-		C.cust_name,
-		C.city
-	from customer C
-	left join orders O
-		on C.customer_id = O.customer_id
-	where O.purch_amt between 500 and 2000;
+select
+	O.ord_no,
+	O.purch_amt,
+	C.cust_name,
+	C.city
+from customer C
+left join orders O
+	on C.customer_id = O.customer_id
+where O.purch_amt between 500 and 2000;
+	
   ```
+**Sample output**:
 
+| Salesman  | cust_name  | city | 
+|-----------|------------|----------|
+| James Hoog| Nick Rimando |	New York |
+|James Hoog	| Brad Davis 	| New York |
+|Mc Lyon 	| Fabian Johnson | Paris |
+|Nail Knite	| Fabian Johnson |	Paris |
+|Pit Alex	| Brad Guzan |	London |
+|Pit Alex	| Julian Green |	London |
 
 **3.** From the following tables ("customer" and "salesman") write a SQL query to find the salesperson(s) and the customer(s) he represents. 
 Return Customer Name, city, Salesman, commission.
