@@ -6,12 +6,11 @@ Return Salesman, cust_name and city.
 	S.name as Salesman,
 	C.cust_name,
 	C.city
-from salesman S
-join customer C
+  from salesman S
+  join customer C
 	on S.city = C.city
-order by Salesman;```
-
-
+  order by Salesman;
+  ```
 **Sample output**:
 
 | Salesman  | cust_name  | city | 
