@@ -11,7 +11,7 @@ Return Salesman, cust_name and city.
 	on S.city = C.city
   order by Salesman;
   
-**Sample output**:
+**Output of the Query**:
 
 | Salesman  | cust_name  | city | 
 |-----------|------------|----------|
@@ -36,7 +36,7 @@ Return ord_no, purch_amt, cust_name, city.
 		on C.customer_id = O.customer_id
 	where O.purch_amt between 500 and 2000;	
 
-**Sample output**:
+**Output of the Query**:
 | ord_no  | purch_amt | cust_name | city |
 |-----------|------------|----------|----------|
 | 70007	| 948.50 |	Graham Zusi	| California |
@@ -44,6 +44,29 @@ Return ord_no, purch_amt, cust_name, city.
 
 **3.** From the following tables ("customer" and "salesman") write a SQL query to find the salesperson(s) and the customer(s) he represents. 
 Return Customer Name, city, Salesman, commission.
+- Solution:
+  ```
+select
+	C.cust_name as Customer_Name,
+	C.city,
+	S.name as Salesman,
+	S.comission
+from customer C
+join salesman S
+	on C.salesman_id = S.salesman_id
+order by Salesman;
+
+**Output of the Query**:
+| Customer_Name  | city | Salesman | comission |
+|-----------|------------|----------|----------|
+| Nick Rimando	| New York | James Hoog | 0.15 |
+| Brad Davis |	New York | James Hoog	| 0.15 |
+| Geoff Cameron	| Berlin | Lauson Hen |	0.12 |
+| Fabian Johnson | Paris | Mc Lyon | 0.14 |
+| Graham Zusi |	California | Nail Knite | 0.13 |
+| Julian Green | London	Nail Knite | 0.13 |
+| Jozy Altidor	| Moscow | Paul Adam | 0.13 |
+| Brad Guzan |	London	 | Pit Alex | 0.11 |
 
 **4.** From the following tables ("customer" and "salesman") write a SQL query to find salespeople who received commissions of more than 12 percent from the company. 
 Return Customer Name, customer city, Salesman, commission.  
