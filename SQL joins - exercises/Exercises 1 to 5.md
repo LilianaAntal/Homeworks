@@ -89,14 +89,34 @@
 
 | Customer_Name  | city | Salesman | comission |
 |-----------|------------|----------|----------|
-|Nick Rimando	|New York	|James Hoog|0.15|
-|Brad Davis	|New York	|James Hoog	|0.15|
-|Fabian Johnson|	Paris|	Mc Lyon |	0.14|
-|Graham Zusi|	California|	Nail Knite|	0.13|
-|Julian Green	|London	|Nail Knite	|0.13|
-|Jozy Altidor	|Moscow	|Paul Adam|	0.13|
-
+|Nick Rimando	|New York |James Hoog |0.15|
+|Brad Davis	|New York |James Hoog |0.15|
+|Fabian Johnson |Paris | Mc Lyon |0.14|
+|Graham Zusi|	California| Nail Knite|0.13|
+|Julian Green	|London	|Nail Knite|0.13|
+|Jozy Altidor	|Moscow	|Paul Adam|0.13|
 
 **5.** From the following tables ("customer" and "salesman") write a SQL query to locate those salespeople who do not live in the same city where 
 --their customers live and have received a commission of more than 12% from the company. 
 > Return Customer Name, customer city, Salesman, salesman city, commission. 
+- Solution:
+  ```
+	select
+	C.cust_name as Customer_Name,
+	C.city as Customer_City,
+	S.name as Salesman,
+	S.city as Salesman_City,
+	S.comission
+	from salesman S
+	join customer C
+		on S.salesman_id = C.salesman_id
+	where S.city <> C.city and S.comission > 0.12
+	order by Salesman;
+
+**Output of the Query**:
+
+| Customer_Name  | Customer_City | Salesman | Salesman_City | comission |
+|----------------|---------------|----------|---------------|-----------|
+| Graham Zusi| California| Nail Knite |	Paris| 0.13 |
+| Julian Green| London| Nail Knite | Paris | 0.13 |
+| Jozy Altidor| Moscow | Paul Adam | Rome | 0.13 |
