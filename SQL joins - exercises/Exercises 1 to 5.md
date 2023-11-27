@@ -96,8 +96,7 @@
 |Julian Green	|London	|Nail Knite|0.13|
 |Jozy Altidor	|Moscow	|Paul Adam|0.13|
 
-**5.** From the following tables ("customer" and "salesman") write a SQL query to locate those salespeople who do not live in the same city where 
---their customers live and have received a commission of more than 12% from the company. 
+**5.** From the following tables ("customer" and "salesman") write a SQL query to locate those salespeople who do not live in the same city where their customers live and have received a commission of more than 12% from the company. 
 > Return Customer Name, customer city, Salesman, salesman city, commission. 
 - Solution:
   ```
