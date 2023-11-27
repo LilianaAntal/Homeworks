@@ -9,8 +9,8 @@ Return Salesman, cust_name and city.
   from salesman S
   join customer C
 	on S.city = C.city
-  order by Salesman;
-  ```
+  order by Salesman;```
+  
 **Sample output**:
 
 | Salesman  | cust_name  | city | 
@@ -34,19 +34,13 @@ select
 from customer C
 left join orders O
 	on C.customer_id = O.customer_id
-where O.purch_amt between 500 and 2000;
-	
-  ```
-**Sample output**:
+where O.purch_amt between 500 and 2000;	```
 
-| Salesman  | cust_name  | city | 
-|-----------|------------|----------|
-| James Hoog| Nick Rimando |	New York |
-|James Hoog	| Brad Davis 	| New York |
-|Mc Lyon 	| Fabian Johnson | Paris |
-|Nail Knite	| Fabian Johnson |	Paris |
-|Pit Alex	| Brad Guzan |	London |
-|Pit Alex	| Julian Green |	London |
+**Sample output**:
+| ord_no  | purch_amt | cust_name | city |
+|-----------|------------|----------|----------|
+| 70007	| 948.50 |	Graham Zusi	| California |
+| 70010	| 1983.43|	Fabian Johnson	| Paris |
 
 **3.** From the following tables ("customer" and "salesman") write a SQL query to find the salesperson(s) and the customer(s) he represents. 
 Return Customer Name, city, Salesman, commission.
