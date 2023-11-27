@@ -26,15 +26,15 @@ Return Salesman, cust_name and city.
 Return ord_no, purch_amt, cust_name, city.
 - Solution:
   ```
-select
-	O.ord_no,
-	O.purch_amt,
-	C.cust_name,
-	C.city
-from customer C
-left join orders O
-	on C.customer_id = O.customer_id
-where O.purch_amt between 500 and 2000;	```
+	select
+		O.ord_no,
+		O.purch_amt,
+		C.cust_name,
+		C.city
+	from customer C
+	left join orders O
+		on C.customer_id = O.customer_id
+	where O.purch_amt between 500 and 2000;	```
 
 **Sample output**:
 | ord_no  | purch_amt | cust_name | city |
